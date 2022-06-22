@@ -1,0 +1,1338 @@
+%% bare_adv.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See: 
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the advanced use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE Computer
+%% Society journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+% IEEEtran V1.7 and later provides for these CLASSINPUT macros to allow the
+% user to reprogram some IEEEtran.cls defaults if needed. These settings
+% override the internal defaults of IEEEtran.cls regardless of which class
+% options are used. Do not use these unless you have good reason to do so as
+% they can result in nonIEEE compliant documents. User beware. ;)
+%
+%\newcommand{\CLASSINPUTbaselinestretch}{1.0} % baselinestretch
+%\newcommand{\CLASSINPUTinnersidemargin}{1in} % inner side margin
+%\newcommand{\CLASSINPUToutersidemargin}{1in} % outer side margin
+%\newcommand{\CLASSINPUTtoptextmargin}{1in}   % top text margin
+%\newcommand{\CLASSINPUTbottomtextmargin}{1in}% bottom text margin
+%
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[10pt,journal,compsoc]{../sty/IEEEtran}
+
+
+% For Computer Society journals, IEEEtran defaults to the use of 
+% Palatino/Palladio as is done in IEEE Computer Society journals.
+% To go back to Times Roman, you can use this code:
+%\renewcommand{\rmdefault}{ptm}\selectfont
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+% *** CITATION PACKAGES ***
+%
+\ifCLASSOPTIONcompsoc
+  % The IEEE Computer Society needs nocompress option
+  % requires cite.sty v4.0 or later (November 2003)
+  \usepackage[nocompress]{cite}
+  \usepackage{graphicx}
+\else
+  % normal IEEE
+  \usepackage{cite}
+\fi
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+%
+% Note that some packages require special options to format as the Computer
+% Society requires. In particular, Computer Society  papers do not use
+% compressed citation ranges as is done in typical IEEE papers
+% (e.g., [1]-[4]). Instead, they list every citation separately in order
+% (e.g., [1], [2], [3], [4]). To get the latter we need to load the cite
+% package with the nocompress option which is supported by cite.sty v4.0
+% and later.
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%\usepackage{acronym}
+% acronym.sty was written by Tobias Oetiker. This package provides tools for
+% managing documents with large numbers of acronyms. (You don't *have* to
+% use this package - unless you have a lot of acronyms, you may feel that
+% such package management of them is bit of an overkill.)
+% Do note that the acronym environment (which lists acronyms) will have a
+% problem when used under IEEEtran.cls because acronym.sty relies on the
+% description list environment - which IEEEtran.cls has customized for
+% producing IEEE style lists. A workaround is to declared the longest
+% label width via the IEEEtran.cls \IEEEiedlistdecl global control:
+%
+% \renewcommand{\IEEEiedlistdecl}{\IEEEsetlabelwidth{SONET}}
+% \begin{acronym}
+%
+% \end{acronym}
+% \renewcommand{\IEEEiedlistdecl}{\relax}% remember to reset \IEEEiedlistdecl
+%
+% instead of using the acronym environment's optional argument.
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/acronym
+
+
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/pkg/mdwtools
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/pkg/eqparbox
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=footnotesize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a sans serif font rather
+% than the serif font used in traditional IEEE formatting and thus the need
+% to invoke different subfig.sty package options depending on whether
+% compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+
+
+%\ifCLASSOPTIONcaptionsoff
+%  \usepackage[nomarkers]{endfloat}
+% \let\MYoriglatexcaption\caption
+% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
+%\fi
+% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and 
+% Axel Sommerfeldt. This package may be useful when used in conjunction with 
+% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
+% submissions have lists of figures/tables at the end of the paper and that
+% figures/tables without any captions are placed on a page by themselves at
+% the end of the document. If needed, the draftcls IEEEtran class option or
+% \CLASSINPUTbaselinestretch interface can be used to increase the line
+% spacing as well. Be sure and use the nomarkers option of endfloat to
+% prevent endfloat from "marking" where the figures would have been placed
+% in the text. The two hack lines of code above are a slight modification of
+% that suggested by in the endfloat docs (section 8.4.1) to ensure that
+% the full captions always appear in the list of figures/tables - even if
+% the user used the short optional argument of \caption[]{}.
+% IEEE papers do not typically make use of \caption[]'s optional argument,
+% so this should not be an issue. A similar trick can be used to disable
+% captions of packages such as subfig.sty that lack options to turn off
+% the subcaptions:
+% For subfig.sty:
+% \let\MYorigsubfloat\subfloat
+% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
+% However, the above trick will not work if both optional arguments of
+% the \subfloat command are used. Furthermore, there needs to be a
+% description of each subfigure *somewhere* and endfloat does not add
+% subfigure captions to its list of figures. Thus, the best approach is to
+% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
+% and instead reference/explain all the subfigures within the main caption.
+% The latest version of endfloat.sty and its documentation can obtained at:
+% http://www.ctan.org/pkg/endfloat
+%
+% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
+% later in the document, say, to conditionally put the References on a 
+% page by themselves.
+
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage[square, comma, sort&compress, numbers]{natbib}
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+% NOTE: PDF thumbnail features are not required in IEEE papers
+%       and their use requires extra complexity and work.
+%\ifCLASSINFOpdf
+%  \usepackage[pdftex]{thumbpdf}
+%\else
+%  \usepackage[dvips]{thumbpdf}
+%\fi
+% thumbpdf.sty and its companion Perl utility were written by Heiko Oberdiek.
+% It allows the user a way to produce PDF documents that contain fancy
+% thumbnail images of each of the pages (which tools like acrobat reader can
+% utilize). This is possible even when using dvi->ps->pdf workflow if the
+% correct thumbpdf driver options are used. thumbpdf.sty incorporates the
+% file containing the PDF thumbnail information (filename.tpm is used with
+% dvips, filename.tpt is used with pdftex, where filename is the base name of
+% your tex document) into the final ps or pdf output document. An external
+% utility, the thumbpdf *Perl script* is needed to make these .tpm or .tpt
+% thumbnail files from a .ps or .pdf version of the document (which obviously
+% does not yet contain pdf thumbnails). Thus, one does a:
+% 
+% thumbpdf filename.pdf 
+%
+% to make a filename.tpt, and:
+%
+% thumbpdf --mode dvips filename.ps
+%
+% to make a filename.tpm which will then be loaded into the document by
+% thumbpdf.sty the NEXT time the document is compiled (by pdflatex or
+% latex->dvips->ps2pdf). Users must be careful to regenerate the .tpt and/or
+% .tpm files if the main document changes and then to recompile the
+% document to incorporate the revised thumbnails to ensure that thumbnails
+% match the actual pages. It is easy to forget to do this!
+% 
+% Unix systems come with a Perl interpreter. However, MS Windows users
+% will usually have to install a Perl interpreter so that the thumbpdf
+% script can be run. The Ghostscript PS/PDF interpreter is also required.
+% See the thumbpdf docs for details. The latest version and documentation
+% can be obtained at.
+% http://www.ctan.org/pkg/thumbpdf
+
+
+% NOTE: PDF hyperlink and bookmark features are not required in IEEE
+%       papers and their use requires extra complexity and work.
+% *** IF USING HYPERREF BE SURE AND CHANGE THE EXAMPLE PDF ***
+% *** TITLE/SUBJECT/AUTHOR/KEYWORDS INFO BELOW!!           ***
+\newcommand\MYhyperrefoptions{bookmarks=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabels=true,
+colorlinks=true,linkcolor={black},citecolor={black},urlcolor={black},
+pdftitle={Bare Demo of IEEEtran.cls for Computer Society Journals},%<!CHANGE!
+pdfsubject={Typesetting},%<!CHANGE!
+pdfauthor={Michael D. Shell},%<!CHANGE!
+pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
+             template}}%<^!CHANGE!
+%\ifCLASSINFOpdf
+%\usepackage[\MYhyperrefoptions,pdftex]{hyperref}
+%\else
+%\usepackage[\MYhyperrefoptions,breaklinks=true,dvips]{hyperref}
+%\usepackage{breakurl}
+%\fi
+% One significant drawback of using hyperref under DVI output is that the
+% LaTeX compiler cannot break URLs across lines or pages as can be done
+% under pdfLaTeX's PDF output via the hyperref pdftex driver. This is
+% probably the single most important capability distinction between the
+% DVI and PDF output. Perhaps surprisingly, all the other PDF features
+% (PDF bookmarks, thumbnails, etc.) can be preserved in
+% .tex->.dvi->.ps->.pdf workflow if the respective packages/scripts are
+% loaded/invoked with the correct driver options (dvips, etc.). 
+% As most IEEE papers use URLs sparingly (mainly in the references), this
+% may not be as big an issue as with other publications.
+%
+% That said, Vilar Camara Neto created his breakurl.sty package which
+% permits hyperref to easily break URLs even in dvi mode.
+% Note that breakurl, unlike most other packages, must be loaded
+% AFTER hyperref. The latest version of breakurl and its documentation can
+% be obtained at:
+% http://www.ctan.org/pkg/breakurl
+% breakurl.sty is not for use under pdflatex pdf mode.
+%
+% The advanced features offer by hyperref.sty are not required for IEEE
+% submission, so users should weigh these features against the added
+% complexity of use.
+% The package options above demonstrate how to enable PDF bookmarks
+% (a type of table of contents viewable in Acrobat Reader) as well as
+% PDF document information (title, subject, author and keywords) that is
+% viewable in Acrobat reader's Document_Properties menu. PDF document
+% information is also used extensively to automate the cataloging of PDF
+% documents. The above set of options ensures that hyperlinks will not be
+% colored in the text and thus will not be visible in the printed page,
+% but will be active on "mouse over". USING COLORS OR OTHER HIGHLIGHTING
+% OF HYPERLINKS CAN RESULT IN DOCUMENT REJECTION BY THE IEEE, especially if
+% these appear on the "printed" page. IF IN DOUBT, ASK THE RELEVANT
+% SUBMISSION EDITOR. You may need to add the option hypertexnames=false if
+% you used duplicate equation numbers, etc., but this should not be needed
+% in normal IEEE work.
+% The latest version of hyperref and its documentation can be obtained at:
+% http://www.ctan.org/pkg/hyperref
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{A3T-GCN: Attention Temporal Graph Convolutional Network for Traffic Forecasting}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+%
+%\IEEEcompsocitemizethanks is a special \thanks that produces the bulleted
+% lists the Computer Society journals use for "first footnote" author
+% affiliations. Use \IEEEcompsocthanksitem which works much like \item
+% for each affiliation group. When not in compsoc mode,
+% \IEEEcompsocitemizethanks becomes like \thanks and
+% \IEEEcompsocthanksitem becomes a line break with idention. This
+% facilitates dual compilation, although admittedly the differences in the
+% desired content of \author between the different types of papers makes a
+% one-size-fits-all approach a daunting prospect. For instance, compsoc 
+% journal papers have the author affiliations above the "Manuscript
+% received ..."  text while in non-compsoc journals this is reversed. Sigh.
+
+\author{Jiawei Zhu, Yujiao Song, Lin Zhao and Haifeng Li*% <-this % stops a space
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem H. Li, J. Zhu, Y. Song and L. Zhao are with School of Geosciences and Info-Physics, Central South University, Changsha 410083, China.}
+% note need leading \protect in front of \\ to get a newline within \thanks as
+% \\ is fragile and will error, could use \hfil\break instead.
+% \IEEEcompsocthanksitem C. Zhang is with School of Computational Science and Engineering, Georgia Institute of Technology, Atlanta, GA 30332, USA.
+% \IEEEcompsocthanksitem W. Pu and G. Wu are with with School of Traffic Transportation Engineering, Central South University, Changsha 410083, China.
+% Corresponding author: Guohua Wu, guohuawu@csu.edu.cn
+% \IEEEcompsocthanksitem Z. Duan is with College of Transportation Engineering, Tongji University, Shanghai 201804, China.
+% \IEEEcompsocthanksitem T. Lin is with College of Biosystems Engineering and Food Science, Zhejiang University, Hangzhou, China. \protect \\ }% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}
+}
+
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+% 注意\markboth{Submitted to IEEE Transactions on Intelligent Transportation Systems}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Advanced Demo of IEEEtran.cls for IEEE Computer Society Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+% The publisher's ID mark at the bottom of the page is less important with
+% Computer Society journal papers as those publications place the marks
+% outside of the main text columns and, therefore, unlike regular IEEE
+% journals, the available text space is not reduced by their presence.
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2015 IEEE}
+% or like this to get the Computer Society new two part style.
+%\IEEEpubid{\makebox[\columnwidth]{\hfill 0000--0000/00/\$00.00~\copyright~2015 IEEE}%
+%\hspace{\columnsep}\makebox[\columnwidth]{Published by the IEEE Computer Society\hfill}}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark (Computer Society journal
+% papers don't need this extra clearance.)
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+% for Computer Society papers, we must declare the abstract and index terms
+% PRIOR to the title within the \IEEEtitleabstractindextext IEEEtran
+% command as these need to go into the title area created by \maketitle.
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+Accurate real-time traffic forecasting is a core technological problem against the implementation of the intelligent transportation system. However,  it remains challenging considering the complex spatial and temporal dependencies among traffic flows. In the spatial dimension, due to the connectivity of the road network, the traffic flows between linked roads are closely related. In terms of the temporal factor, although there exists a tendency among adjacent time points in general, the importance of distant past points is not necessarily smaller than that of recent past points since traffic flows are also affected by external factors.  In this study, an attention temporal graph convolutional network (A3T-GCN) traffic forecasting method was proposed to simultaneously capture global temporal dynamics and spatial correlations. The A3T-GCN model learns the short-time trend in time series by using the gated recurrent units and learns the spatial dependence based on the topology of the road network through the graph convolutional network. Moreover, the attention mechanism was introduced to adjust the importance of different time points and assemble global temporal information to improve prediction accuracy. Experimental results in real-world datasets demonstrate the effectiveness and robustness of proposed A3T-GCN. The source code can be visited at https://github.com/lehaifeng/T-GCN/A3T.
+
+
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+traffic forecasting, attention temporal graph convolutional network, spatial dependence, temporal dependence
+\end{IEEEkeywords}}
+
+
+% make the title area
+\maketitle
+
+
+% To allow for easy dual compilation without having to reenter the
+% abstract/keywords data, the \IEEEtitleabstractindextext text will
+% not be used in maketitle, but will appear (i.e., to be "transported")
+% here as \IEEEdisplaynontitleabstractindextext when compsoc mode
+% is not selected <OR> if conference mode is selected - because compsoc
+% conference papers position the abstract like regular (non-compsoc)
+% papers do!
+\IEEEdisplaynontitleabstractindextext
+% \IEEEdisplaynontitleabstractindextext has no effect when using
+% compsoc under a non-conference mode.
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+\ifCLASSOPTIONcompsoc
+\IEEEraisesectionheading{\section{Introduction}\label{sec:introduction}}
+\else
+\section{Introduction}
+\label{sec:introduction}
+\fi
+% Computer Society journal (but not conference!) papers do something unusual
+% with the very first section heading (almost always called "Introduction").
+% They place it ABOVE the main text! IEEEtran.cls does not automatically do
+% this for you, but you can achieve this effect with the provided
+% \IEEEraisesectionheading{} command. Note the need to keep any \label that
+% is to refer to the section immediately after \section in the above as
+% \IEEEraisesectionheading puts \section within a raised box.
+
+
+
+
+% The very first letter is a 2 line initial drop letter followed
+% by the rest of the first word in caps (small caps for compsoc).
+% 
+% form to use if the first word consists of a single letter:
+% \IEEEPARstart{A}{demo} file is ....
+% 
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by the IEEE):
+% \IEEEPARstart{A}{}demo file is ....
+% 
+% Some journals put the first two words in caps:
+% \IEEEPARstart{T}{his demo} file is ....
+% 
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+\IEEEPARstart{T}{raffic} forecasting is an important component of intelligent transportation systems and a vital part of transportation planning and management and traffic control \cite {Huang2005Dynamic,Jian2012Synthesis,Jing2004A,Gaoa2018Measuring}. Accurate real-time traffic forecasting has been a great challenge because of complex spatiotemporal dependencies. Temporal dependence means that traffic state changes with time, which is manifested by periodicity and tendency. Spatial dependence means that changes in traffic state are subject to the structural topology of road networks, which is manifested by the transmission of upstream traffic state to downstream sections and the retrospective effects of downstream traffic state on the upstream section\cite{Dong2012Spatial}. Hence, considering the complex temporal features and the topological characteristics of 
+the road network is essential in realizing the traffic forecasting task.
+\par Existing traffic forecasting models can be divided into parametric and non-parametric models. Common parametric models include historical average, time series \cite{Ahmed1979ANALYSIS,Hodge2014Short}, linear regression \cite{Sun2004Interval}, and Kalman filtering models\cite{Okutani1984Dynamic}. Although traditional parametric models use simple algorithms, they depend on stationary hypothesis. These models can neither reflect nonlinearity and uncertainty of traffic states nor overcome the interference of random events, such as traffic accidents. Non-parametric models can solve these problems well because they can learn the statistical laws of data automatically with adequate historical data. Common non-parametric models include k-nearest \cite{Altman1992An}, support vector regression (SVR) \cite{article,Fu2013Short}, fuzzy logic \cite{Yin2002Urban}, Bayesian network\cite{Sun2006A}, and neural network models.
+\par Recently, deep neural network models have attracted wide attention from scholars because of the rapid development of deep learning \cite{Silver2017Mastering,Morav2017DeepStack}. Recurrent neural networks (RNNs), long short-term memory (LSTM) \cite{Graves1997Long}, and gated recurrent units (GRUs)\cite{Cho2014On} have been successfully utilized in traffic forecasting because they can use self-circulation mechanism and model temporal dependence \cite{Rui2016Using,Lint2002Freeway}. However, these models only consider the temporal variation of traffic state and neglect spatial dependence. Many scholars have introduced convolutional neural networks (CNNs) in their models to characterize spatial dependence remarkably. Wu et al. \cite{Wu2016Short} designed a feature fusion framework for short-term traffic flow forecasting by combining a CNN with LSTM. The framework captured the spatial characteristics of traffic flow through a one-dimensional CNN and explored short-term variations and periodicity of traffic flow with two LSTMs. Cao et al. \cite{Cao2017Interactive} proposed an end-to-end model called ITRCN, which transformed the interactive network flow to images and captured network flows using a CNN. ITRCN also extracted temporal features by using GRU. An experiment proved that the forecasting error of this method was 14.3\% and 13.0\% higher than those of GRU and CNN, respectively. Yu et al. \cite{Yu2017Spatiotemporal} captured spatial correlation and temporal dynamics by using DCNN and LSTM, respectively. They also proved the superiority of SRCN based on the investigation on the traffic network data in Beijing.
+\par Although CNN is actually applicable to Euclidean data \cite{defferrard2016convolutional}, such as image and grids, it still has limitations in traffic networks, which possess non-Euclidean structures. In recent years, graph convolutional network (GCN) \cite{kipf2016semisupervised}, which can overcome the abovementioned limitations and capture structural characteristics of networks, has rapidly developed \cite{DBLP:journals/corr/LiYSL17, zhao2019t, yu2020forecasting}. In addition, RNNs and their variants use sequential processing over time and more apt to remember the latest information, thus are suitable to capture evolving short-term tendencies. While The importance of different time points cannot be distinguished only by the proximity of time. Mechanisms that are capable of learning global correlations are needed.
+\par For this reason, an attention temporal GCN (A3T-GCN) was proposed for traffic forecasting task. The A3T-GCN combines GCNs and GRUs and introduces an attention mechanism\cite{xu2015attend, vaswani2017attention}. It not only can capture spatiotemporal dependencies but also ajust and assemble global variation information. The A3T-GCN is used for traffic forecasting on the basis of urban road networks.
+
+%\hfill mds
+ 
+%\hfill August 26, 2015
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that the IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+% However, the Computer Society has been known to put floats at the bottom.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command,
+% and the \label for the overall figure must come after \caption.
+% \hfil is used as a separator to get equal spacing.
+% Watch out that the combined width of all the subfigures on a 
+% line do not exceed the text width or a line break will occur.
+%
+%\begin{figure*}[!t]
+%\centering
+%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
+%\label{fig_second_case}}
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat[]), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
+% labels, the optional argument to \subfloat must be present. If a
+% subcaption is not desired, just leave its contents blank,
+% e.g., \subfloat[].
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table and, given that table
+% captions serve much like titles, are usually capitalized except for words
+% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
+% and up, which are usually not capitalized unless they are the first or
+% last word of the caption. Table text will default to \footnotesize as
+% the IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that the IEEE does not put floats in the very first column
+% - or typically anywhere on the first page for that matter. Also,
+% in-text middle ("here") positioning is typically not used, but it
+% is allowed and encouraged for Computer Society conferences (but
+% not Computer Society journals). Most IEEE journals/conferences use
+% top floats exclusively. 
+% Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the
+% \fnbelowfloat command of the stfloats package.
+\section{A3T-GCN}
+\subsection{Definition of problems}
+\par In this study, traffic forecasting is performed to predict future traffic state according to historical traffic states on urban roads. Generally, traffic state can refer to traffic flow, speed, and density. In this study, traffic state only refers to traffic speed.
+
+Definition 1. Road network G: The topological structure of urban road network is described as $G=(V,E)$,where $V=\{v_1,v_2,\cdots,v_N\}$ is the set of road section, and N is the number of road sections.  $E$ is the set of edges, which reflects the connections between road sections. The whole connectivity information is stored in the adjacent matrix $A\in R^{N\times N}$, where rows and columns are indexed by road sections, and the value of each entry indicates the connectivity between corresponding road sections. The entry value is 0 if there is no existed link between roads and 1 (unweighted graph) or non-negative (weighted graph) if otherwise.
+
+Definition 2. Feature matrix $X^{N\times P}$: Traffic speed on a road section is viewed as the attribute of network nodes, and it is expressed by the feature matrix $X\in R^{N\times P}$, where P is the number of node attribute features, that is, the length of historical time series. $X_{i}$ denotes the traffic speed in all sections at time i.
+
+\par Therefore, the traffic forecasting modelling temporal and spatial dependencies can be viewed as learning a mapping function f on the basis of the road network G and feature matrix X of the road network. Traffic speeds of future T moments are calculated as follows:
+\begin{equation}
+%\label{eqn_example}
+\left[X_{t+1},\cdots,X_{t+T}\right] = f\left(G;\left(X_{t-n},\cdots,X_{t-1},X_{t}\right)\right) 
+\end{equation}
+where n is the length of a given historical time series, and T is the length of time series that needs to be forecasted.
+% needed in second column of first page if using \IEEEpubid
+%\IEEEpubidadjcol
+\subsection{GCN model}
+\par GCNs are semi-supervised models that can process graph structures. They are an advancement of CNNs in graph fields. GCNs have achieved many progresses in many applications, such as image classification \cite{Bruna2013Spectral}, document classification \cite{defferrard2016convolutional}, and unsupervised learning \cite{kipf2016semisupervised}. Convolutional mode in GCNs includes spectrum and spatial domain convolutions \cite{Bruna2013Spectral}. The former was applied in this study. Spectrum convolution can be defined as the product of signal x on the graph and figure filter $g_\theta(L)$,which is constructed in the Fourier domain:$g_\theta(L) \ast x = Ug_\theta(U^Tx)$, where $\theta$ is a model parameter, L is the graph Laplacian matrix, U is the eigenvector of normalized Laplacian matrix $L = I_N - D^{-\frac{1}{2}}AD^{-\frac{1}{2}} = U\lambda U^T$, and $U^Tx$ is the graph Fourier transformation of x. x can also be promoted to $X\in R^{N\times C}$, where C refers to the number of features.
+\par Given the characteristic matrix X and adjacent matrix A, GCNs can replace the convolutional operation in anterior CNNs by performing the spectrum convolutional operation with consideration to the graph node and first-order adjacent domains of nodes to capture the spatial characteristics of graph. Moreover, hierarchical propagation rule is applied to superpose multiple networks. A multilayer GCN model can be expressed as:
+\begin{equation}
+    H^{\left(l+1\right)}=\sigma\left(\widetilde{D}^{-\frac{1}{2}}\,\widehat{A}\,\widetilde{D}^{-\frac{1}{2}}\,H^{\left(l\right)}\,\theta^{\left(l\right)}\right)
+\end{equation}
+
+\par where $\widetilde{A}=A+I_{N}$ is an adjacent matrix with self-connection structures, $I_{N}$ is an identity matrix, $\widetilde{D}$ is a degree matrix, $\widetilde{D}_{ii}=\sum_{j}\widetilde{A}_{ij}$, $H^{\left(l\right)}\in R^{N\times l}$ is the output of layer l, $\theta^{\left(l\right)}$ is the parameter of layer l, and $\sigma(\cdot)$ is an activation function used for nonlinear modeling.
+\par Generally, a two-layer GCN model \cite{kipf2016semisupervised} can be expressed as:
+\begin{equation}
+f\left(X,A\right) = \sigma\left(\widehat{A}\,ReLU\left(\widehat{A}\, X\,W_{0}\right)W_{1}\right)
+\end{equation}
+\par where X is a feature matrix; A is the adjacent matrix; and $\widehat{A} = \widetilde{D}^{-\frac{1}{2}}\,\widetilde{A} \,\widetilde{D}^{-\frac{1}{2}}$is a preprocessing step, where $\widetilde{A}=A+I_{N}$ is the adjacent matrix of graph G with self-connection structure. $W_{0}\in R^{P\times H}$ is the weight matrix from the input layer to the hidden unit layer, where P is the length of time, and H is the number of hidden units. $W_{1}\in R^{H\times T}$ is the weight matrix from the hidden layer to the output layer. $f\left(X,A\right)\in R^{N\times T}$ denotes the output with a forecasting length of  $T$, and $ReLU()$is a common nonlinear activation function.
+
+\par GCNs can encode the topological structures of road networks and the attributes of road sections simultaneously by determining the topological relationship between the central road section and the surrounding road sections. Spatial dependence can be captured on this basis. In a word, this study learned spatial dependence through the GCN model \cite{kipf2016semisupervised}.
+
+\subsection{GRU model}
+\par Temporal dependence of traffic state is another key problem that hinders traffic forecasting. RNNs are neural network models that process sequential data. However, limitations in long-term forecasting are observed in traditional RNNs because of disadvantages in gradient disappearance and explosion \cite{Bengio2002Learning}. LSTM \cite{Graves1997Long} and GRUs \cite{Cho2014On} are variants of RNNs that mediate the problems effectively. LSTM and GRUs basically have the same fundamental principles. Both models use gated mechanisms to maintain long-term information and perform similarly in various tasks \cite{chung2014empirical}. However, LSTM is more complicated, and it takes longer training time than GRUs, whereas GRU has a relatively simpler structure, fewer parameters, and faster training ability compared with LSTM.
+\par In the present model, temporal dependence was captured by a GRU model. The calculation process is introduced as follows, where $h_{t-1}$ is the hidden state at t-1, $x_{t}$ is the traffic speed at the current moment, and $r_{t}$ is the reset gate to control the degree of neglecting the state information at the previous moment. Information unrelated with forecasting can be abandoned. If the reset gate outputs 0, then the traffic information at the previous moment is neglected. If the reset gate outputs 1, then the traffic information at the previous moment is brought into the next moment completely. $u_{t}$ is the update gate and is used to control the state information quantity at the previous moment that is brought into the current state. Meanwhile, $c_{t}$ is the memory content stored at the current moment, and $h_{t}$ is the output state at the current moment. 
+
+\begin{equation}
+u_{t}=\sigma(W_{u}\ast \left[X_{t},h_{t-1}\right]+b_{u})
+\end{equation}
+\begin{equation}
+r_{t}=\sigma(W_{r}\ast \left[X_{t},h_{t-1}\right]+b_{r})
+\end{equation}
+\begin{equation}
+c_{t}=\tanh(W_{c}\left[X_{t},(r_{t}*h_{t-1})\right]+b_{c})
+\end{equation}
+\begin{equation}
+h_{t}=u_{t}*h_{t-1}+(1-u_{t})*c_{t}
+\end{equation}
+
+\par GRUs determine traffic state at the current moment by using hidden state at previous moment and traffic information at current moment as input. GRUs retain the variation trends of historical traffic information when capturing traffic information at current moment because of the gated mechanism. Hence, this model can capture dynamic temporal variation features from the traffic data, that is, this study has applied a GRU model to learn the temporal variation trends of the traffic state.
+
+\subsection{Attention model}
+\par Attention model is realized on the basis of encoder–decoder model. This model is initially used in neural machine translation tasks\cite{bahdanau2014neural}. Nowadays, attention models are widely applied in image caption generation \cite{xu2015attend}, recommendation system \cite{xiao2017attentional}, and document classification \cite{Pappas2017Multilingual}. With the rapid development of such models, existing attention models can be divided into multiple types, such as soft and hard attention\cite{bahdanau2014neural}, global and local attention\cite{Luong2015Effective}, and self-attention\cite{vaswani2017attention}. In the current study, a soft attention model was used to learn the importance of traffic information at every moment, and then a context vector that could express the global variation trends of traffic state was calculated for future traffic forecasting tasks.
+\par Suppose that a time series $x_i(i=1,2,\cdots,n)$,where n is the time series length, is introduced. The design process of soft attention models is introduced as follows. First, the hidden states $h_i(i=1,2,\cdots,n)$ at different moments are calculated using CNNs (and their variants) or RNNs (and their variant), and they are expressed as $H=\{h_1,h_2,\cdots,h_n\}$.Second, a scoring function is designed to calculate the score/weight of each hidden state.  Third, an attention function is designed to calculate the context vector $(Ct)$ that can describe global traffic variation information. Finally, the final output results are obtained using the context vector. In the present study, these steps were followed in the design process, but a multilayer perception was applied as the scoring function instead.
+\par Particularly, the characteristics $(h_i)$ at each moment were used as input when calculating the weight of each hidden state based on f. The corresponding outputs could be gained through two hidden layers. The weights of each characteristic $(\alpha_i)$ are calculated by a Softmax normalized index function (eq. (8)), where $w_{(1)}$ and $b_{(1)}$ are the weight and deviation of the first layer and $w_{(2)}$ and $b_{(2)}$ are the weight and deviation of the second layer, respectively.
+\begin{equation}
+e_{i} = w_{(2)}(w_{(1)}H + b_{(1)}) + b_{(2)}
+\end{equation}
+
+\begin{equation}
+\alpha_{i} = \frac{\exp(e_{i})}{\sum_{k=1}^{n}\exp(e_{k})}
+\end{equation}
+\par Finally, the attention function was designed. The calculation process of the context vector $(C_t)$ that covers global traffic variation information is shown in Equation (10).
+\begin{equation}
+C_{t} =\sum_{i=1}^{n}\alpha_{i} \ast h_{i}
+\end{equation}
+
+\subsection{A3T-GCN model}
+\par The A3t-GCN is a improvement of our previous work named T-GCN\cite{zhao2019t}. The attention mechanism was introduced to re-weight the influence of historical traffic states and thus to capture the global variation trends of traffic state. The model structure is shown in Fig. \ref{fig:1}.
+
+\begin{figure*}[t]
+	\centering
+	\begin{center}
+	   \includegraphics[width=1.0\linewidth]{img/Fig1ATGCN.jpg}
+	   \caption{A3T-GCN framework.}
+	   \end{center}
+	   \label{fig:1}
+	\end{figure*}
+
+\par A temporal GCN (T-GCN) model was constructed by combining GCN and GRU. n historical time series traffic data were inputted into the T-GCN model to obtain n hidden states (h) that covered spatiotemporal characteristics:$\{h_{t-n},\cdots,h_{t-1},h_t\}$.The calculation of the T-GCN is shown in eq. (11), where $h_{t-1}$ is the output at t-1. GC is the graph convolutional process. $u_t$ and $r_t$ are the update and reset gates at t, respectively. $c_t$ is the stored content at the current moment. $h_t$ is the output state at moment t, and W and b are the weight and the deviation in the training process, respectively.
+
+\begin{equation}
+u_{t} = \sigma(W_{u} \ast [GC(A,X_{t}),h_{t-1}]+b_{u})
+\end{equation}
+
+
+\begin{equation}
+r_{t} = \sigma (W_{r} \ast [GC(A,X_{t}),h_{t-1}]+b_{r})
+\end{equation}
+
+\begin{equation}
+c_{t} = \tanh (W_{c} \ast [GC(A,X_{t}),(r_{t} \ast h_{t-1})]+b_{c})
+\end{equation}
+
+\begin{equation}
+h_{t} = u_{t} \ast h_{t-1}+(1-u_{t}) \ast c_{t})
+\end{equation}
+\par Then, the hidden states were inputted into the attention model to determine the context vector that covers the global traffic variation information. Particularly, the weight of each h was calculated by Softmax using a multilayer perception:$\{a_{t-n},\cdots,a_{t-1},a_t\}$.The context vector that covers global traffic variation information is calculated by the weighted sum. Finally, forecasting results were outputted using the fully connected layer. 
+\par In sum, we proposed the A3T-GCN to realize traffic forecasting. The urban road network was constructed into a graph network, and the traffic state on different sections was described as node attributes. The topological characteristics of the road network were captured by a GCN to obtain spatial dependence. The dynamic variation of node attributes was captured by a GRU to obtain the local temporal tendency of traffic state. The global variation trend of the traffic state was then captured by the attention model, which was conducive in realizing accurate traffic forecasting.
+
+
+\subsection{Loss function}
+\par Training aims to minimize errors between real and predicted speed in the road network . Real and predicted speed on different sections at t are expressed by $Y$ and $\widehat{Y}$, respectively. Therefore, the objective function of A3T-GCN is shown as follows. The first term aims to minimize the error between real and predicted speed. The second term $L_{reg}$ is a normalization term, which is conducive to avoid overfitting. $\lambda$ is a hyper-parameter.
+\begin{equation}
+loss=\parallel Y_{t}-\widehat{Y_{t}}\parallel+\lambda L_{reg}
+\end{equation}
+
+\section{Experiments}
+
+\subsection{Data Description}
+\par Two real-world traffic datasets, namely, taxi trajectory dataset (SZ\_taxi) in Shenzhen City and loop detector dataset (Los\_loop) in Los Angeles, were used. Both datasets are related with traffic speed. Hence, traffic speed is viewed as the traffic information in the experiments. SZ\_taxi dataset is the taxi trajectory of Shenzhen from Jan. 1 to Jan. 31, 2015. In the present study, 156 major roads of Luohu District were selected as the study area. Los\_loop dataset is collected in the highway of Los Angeles County in real time by loop detectors. A total of 207 sensors along with their traffic speed from Mar. 1 to Mar. 7, 2012 were selected.
+\subsection{Evaluation Metrics}
+\par To evaluate the prediction performance of the model, the error between real traffic speed and predicted results is evaluated on the basis of the following metrics:
+\par (1) Root Mean Squared Error (RMSE):
+\begin{equation}
+RMSE=\sqrt{\frac{1}{M N}\sum_{j=1}^{M}\sum_{i=1}^{N}(y_{i}^{j}-\widehat{y_{i}^{j}})^{2}}
+\end{equation}
+
+\par (2) Mean Absolute Error (MAE):
+\begin{equation}
+MAE=\frac{1}{M N}\sum_{j=1}^{M}\sum_{i=1}^{N}\left|y_{i}^{j}-\widehat{y_{i}^{j}}\right|
+\end{equation}
+
+\par (3) Accuracy:
+\begin{equation}
+Accuracy=1-\frac{\parallel Y-\widehat{Y}\parallel_{F}}{\parallel Y\parallel_{F}}
+\end{equation}
+
+\par (4) Coefficient of Determination ($R^{2}$):
+\begin{equation}
+R^{2}=1-\frac{\sum_{j=1}^{M}\sum_{i=1}^{N}(y_{i}^{j}-\widehat{y_{i}^{j}})^{2}}{\sum_{j=1}^{M}\sum_{i=1}^{N}(y_{i}^{j}-\bar{Y})^{2}}
+\end{equation}
+
+(5) Explained Variance Score ($var$):
+\begin{equation}
+var=1-\frac{Var\left\{Y-\widehat{Y}\right\}}{Var\left\{Y\right\}}
+\end{equation}
+
+where $y_{i}^{j}$ and $\widehat{y_{i}^{j}}$ are the real and predicted traffic information of temporal sample j on road i, respectively. N is the number of nodes on road. M is the number of temporal samples. $Y$ and $\widehat{Y}$ are the set of $y_{i}^{j}$ and $\widehat{y_{i}^{j}}$ respectively, and $\bar{Y}$ is the mean of $Y$.
+
+Particularly, RMSE and MAE are used to measure prediction error. Small RMSE and MASE values reflect high prediction precision. Accuracy is used to measure forecasting precision, and high accuracy value is preferred. $R^{2}$ and $var$ calculate the correlation coefficient, which measures the ability of the prediction result to represent the actual data: the larger the value is, the better the prediction effect is.
+% \begin{figure*}t
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/2.png}
+% \end{center}
+%   \caption{SZ-taxi: Comparison of prediction performance of the A3T-GCN model under different hidden units.}
+% \label{img2}
+% \end{figure*}
+
+% \subsection{Model Parameter Design}
+% \par The hyper-parameters of A3T-GCN include learning rate, epoch, and number of hidden units. In the experiment, learning rate and epoch were manually set on the basis of experiences as 0.001 and 5000, respectively. The number of hidden units is an important parameter in the deep learning model. Different hidden units may significantly influence the prediction precision. The number of hidden units is determined via experiment. In other words, the optimal number of hidden unit is selected by comparing the prediction results.
+
+% \par For SZ\_taxi, the number of hidden units from [8,16,32,64,100,128] was selected in the experiment. The results are shown in Fig. \ref{img2}. The A3T-GCN achieves high forecasting accuracy when the number of hidden units is 100 because the forecasting accuracy increases with the hidden units. However, the computation complexity of the model rises greatly when the number of hidden units reaches a certain extent, thereby leading to the gradual increase in calculation difficulties. The model may experience overfitting and thereby decline the forecasting accuracy. Hence, the number of hidden units in all experiments was set to 100.
+% \par The results in Los\_loop are shown in Fig. \ref{fig:3}. We set the number of hidden units in all experiments to 64.
+
+% \begin{figure*}t
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/3.png}
+% \end{center}
+%   \caption{Los-loop: Comparison of prediction performance of the A3T-GCN under different hidden units.}
+% \label{fig:3}
+% \end{figure*}
+
+\subsection{ Experimental result analysis}
+
+\par The hyper-parameters of A3T-GCN include learning rate, epoch, and number of hidden units. In the experiment, learning rate and epoch were manually set on the basis of experiences as 0.001 and 5000 for both datasets. As for the number of hidden units, we set it to 64 and 100 for SZ\_taxi and Los\_loop, respectively.
+\begin{table*}
+	\caption{The prediction results of the T-GCN model and other baseline methods on SZ-taxi and Los-loop datasets.}
+	\centering
+	\resizebox{160mm}{40mm}{
+	\renewcommand{\arraystretch}{1.3}
+	\begin{tabular}{c|c|cccccc|cccccc}
+		\hline
+		\multirow{2}{*}{T}&
+		\multirow{2}{*}{Metric}&
+		\multicolumn{6}{c|}{SZ-taxi}&
+		\multicolumn{6}{c}{Los-loop} \\
+		\cline{3-14}
+		&&HA&ARIMA&SVR&GCN&GRU&AT-GCN&HA&ARIMA&SVR&GCN&GRU&AT-GCN\\
+%		\\hline
+%		T & Metric&HA&ARIMA&SVR&GCN&GRU&T-GCN&HA&ARIMA&SVR&GCN&GRU&T-GCN\\
+		\hline\hline
+		\multirow{5}*{15min}
+		&$RMSE$&4.2951&7.2406&4.1455&5.6596&3.9994& \textbf{3.8989}&7.4427&10.0439&6.0084&7.7922&5.2182&\textbf{5.0904}\\
+		&$MA$E&2.7815&4.9824&2.6233&4.2367&\textbf{2.5955}&2.6840&4.0145&7.6832&3.7285&5.3525&\textbf{3.0602}&3.1365\\
+		&$Accuracy$&0.7008&0.4463&0.7112&0.6107&0.7249&\textbf{0.7318}&0.8733&0.8275&	0.8977&0.8673&0.9109&\textbf{0.9133}\\
+		&$R^{2}$&0.8307&$\ast$&0.8423&0.6654&0.8329&\textbf{0.8512}&0.7121&0.0025&0.8123&0.6843&0.8576&\textbf{0.8653}\\
+		&$var$&0.8307&0.0035&0.8424&0.6655&0.8329&\textbf{0.8512}&0.7121&$\ast$&0.8146&0.6844&0.8577&\textbf{0.8653}\\
+		\hline
+		\multirow{5}*{30min}
+		&$RMS$E&4.2951&6.7899&4.1628&5.6918&4.0942&\textbf{3.9228}&7.4427&9.3450&6.9588&8.3353&6.2802&\textbf{5.9974}\\
+		&$MAE$&2.7815&4.6765&\textbf{2.6875}&4.2647&2.6906&2.7038&4.0145&7.6891&3.7248&5.6118&\textbf{3.6505}&3.6610\\
+		&$Accuracy$&0.7008&0.3845&0.7100&0.6085&0.7184&\textbf{0.7302}&0.8733&0.8275&0.8815&0.8581&0.8931&\textbf{0.8979}\\
+		&$R^{2}$&0.8307&$\ast$&0.8410&0.6616&0.8249&\textbf{0.8493}&0.7121&0.0031&0.7492&0.6402&0.7957&\textbf{0.8137}\\
+		&$var$&0.8307&0.0081&0.8413&0.6617&0.8250&\textbf{0.8493}&0.7121&$\ast$&0.7523&0.6404&0.7958&\textbf{0.8137}\\
+		\hline
+		\multirow{5}*{45min}
+		&$RMSE$&4.2951&6.7852&4.1885&5.7142&4.1534&\textbf{3.9461}&7.4427&10.0508&7.7504&8.8036&7.0343&\textbf{6.6840}\\
+		&$MAE$&2.7815&4.6734&\textbf{2.7359}&4.2844&2.7743&2.7261&4.0145&7.6924&4.1288&5.9534&\textbf{4.0915}&4.1712\\
+		&$Accuracy$&0.7008&0.3847&0.7082&0.6069&0.7143&\textbf{0.7286}&0.8733&0.8273&0.8680&0.8500&0.8801&\textbf{0.8861}\\
+		&$R^{2}$&0.8307&$\ast$&0.8391&0.6589&0.8198&\textbf{0.8474}&0.7121&$\ast$&0.6899&0.5999&0.7446&\textbf{0.7694}\\
+		&$var$&0.8307&0.0087&0.8397&0.6590&0.8199&\textbf{0.8474}&0.7121&0.0035&0.6947&0.6001&0.7451&\textbf{0.7705}\\	
+		\hline
+		\multirow{5}*{60min}
+		&$RMSE$&4.2951&6.7708&4.2156&5.7361&4.0747&\textbf{3.9707}&7.4427&10.0538&8.4388&9.2657&7.6621&\textbf{7.0990}\\
+		&$MAE$&2.7815&4.6655&2.7751&4.3034&\textbf{2.7712}&2.7391&4.0145&7.6952&\textbf{4.5036}&6.2892&4.5186&4.2343\\
+		&$Accuracy$&0.7008&0.3851&0.7063&0.6054&0.7197&\textbf{0.7269}&0.8733&0.8273&0.8562&0.8421&0.8694&\textbf{0.8790}\\
+		&$R^{2}$&0.8307&$\ast$&0.8370&0.6564&0.8266&\textbf{0.8454}&0.7121&$\ast$&0.6336&0.5583&0.6980&\textbf{0.7407}\\
+		&$var$&0.8307&0.0111&0.8379&0.6564&0.8267&\textbf{0.8454}&0.7121&0.0036&0.5593&0.5593&0.6984&\textbf{0.7415}\\
+		\hline
+	\end{tabular}}
+	\label{table}
+\end{table*}
+
+\par In the present study, 80\% of the traffic data are used as the training set, and the remaining 20\% of the data are used as the test set. The traffic information in the next 15, 30, 45, and 60 min is predicted. The predicted results are compared with results from the historical average model (HA), auto-regressive integrated moving average model (ARIMA), SVR, GCN model, and GRU model. The A3T-GCN is analyzed from perspectives of precision, spatiotemporal prediction capabilities, long-term prediction capability, and global feature capturing capability.
+\par (1) High prediction precision. Table \ref{table} shows the comparisons of different models and two real datasets in terms of the prediction precision of various traffic speed lengths. The prediction precision of neural network models (e.g., A3T-GCN and GRU) is higher than those of other models (e.g., HA, ARIMA, and SVR). With respect to 15-minute time series, the RMSE and accuracy of HA are approximately 9.22\% higher and 4.24\% lower than those of A3T-GCN, respectively. The RMSE and accuracy of ARIMA are approximately 46.15\% higher and 39.01\% lower than those of A3T-GCN, respectively. The RMSE and accuracy of SVR are  approximately 5.95\% higher and 2.81\% lower than those of A3T-GCN, respectively. Compared with GRU, The RMSE and accuracy of HA is approximately 6.88\% higher and 3.32\% lower than those of GRU, respectively. The RMSE and accuracy of ARIMA are approximately 44.76\%  and 38.07\%, respectively. The RMSE and accuracy of SVAR are approximately 3.52\% and 1.87\%, respectively. These results are mainly caused by the poor nonlinear fitting abilities of HA, ARIMA, and SVAR to complicated changing traffic data. Processing long-term non-stationary data is difficult when ARIMA is used. Moreover, ARIMA is gained by averaging the errors of different sections. The data of some sections might greatly fluctuate to increase the final error. Hence, ARIMA shows the lowest forecasting accuracy.
+\par Similar conclusions could be drawn for Los\_loop. In a word, A3T-GCN model can obtain the optimal prediction performance of all metrics in two real datasets, thereby proving the validity and superiority of A3T-GCN model in spatiotemporal traffic forecasting tasks. 
+% \par Table 1 Comparison of prediction precision under different lengths of time series based on SZ-taxi and Los-loop.
+
+
+
+(2) Effectiveness of modelling both spatial and temporal dependencies. To test the benefits brought by depicting the spatiotemporal characteristics of traffic data simultaneously in A3T-GCN, the model is compared with GCN and GRU.
+
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[width=1.0\linewidth]{img/Fig4sz-GCNGRU.jpg}
+  \end{center}
+  \caption{ SZ-taxi: Spatiotemporal prediction capabilities.}
+\label{fig:4}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[width=1.0\linewidth]{img/Fig5los-GCNGRU.jpg}
+  \end{center}
+  \caption{Los-loop: Spatiotemporal prediction capabilities.}
+\label{fig:5}
+\end{figure}
+
+\par Fig. \ref{fig:4} shows the results based on SZ\_taxi. Compared with GCN (considering spatial characteristics only), A3T-GCN achieves approximately 31.11\%, 31.08\%, 30.94\%, and 30.78\% lower RMSEs in 15, 30, 45, and 60 minutes of traffic forecasting time series, respectively. In sum, the prediction error of A3T-GCN is kept lower than that of GCN in 15, 30, 45, and 60 minutes of traffic forecasting. Therefore, the A3T-GCN can capture spatial characteristics.
+\par Compared with GRU (considering temporal characteristics only), A3T-GCN achieves approximately 2.51\% lower RMSE in 15 minutes traffic forecasting, approximately 4.19\% lower RMSE in 30 minutes traffic forecasting, approximately 4.99\% lower RMSE in 45 minutes time series, and approximately 2.55\% lower RMSE in 60 minutes time series. In sum, the prediction error of A3T-GCN is kept lower than that of GRU in 15, 30, 45, and 60 minutes traffic forecasting. Therefore, the A3T-GCN can capture temporal dependence.
+\par Results based on Los\_loop, which are similar with those based on SZ\_taxi, are shown in Fig. \ref{fig:5}. In short, the A3T-GCN has good spatiotemporal prediction capabilities. In other words, A3T-GCN model can capture the spatial topological characteristics of urban road networks and the temporal variation characteristics of traffic state simultaneously.
+
+
+
+\par (3) Long-term prediction capability. Long-term prediction capability of A3T-GCN was tested by traffic speed forecasting in 15, 30, 45, and 60 minutes prediction horizon.
+Forecasting results based on SZ-taxi are shown in Fig. \ref{fig:6}. The RMSE comparison of different models under different lengths of time series is shown in Fig. \ref{fig:6}(a). The RMSE of the A3T-GCN is the lowest under all lengths of time series. The variation trends of RMSE and accuracy, which reflects prediction error and precision, respectively, of the A3T-GCN under different lengths of time series are shown in Fig. \ref{fig:6}(b). RMSE increases as the length of time series increases, whereas accuracy declines slightly and shows certain stationary.
+\par The forecasting results based on Los\_loop are shown in Fig. \ref{fig:7}, and consistent laws are found. In sum, A3T-GCN has good long-term prediction capability. It can obtain high accuracy by training for 15, 30, 45, and 60 minutes prediction horizon. Forecasting results of A3T-GCN change slightly with changes in length of time series, thereby showing certain stationary. Therefore, the A3T-GCN is applicable to short-term and long-term traffic forecasting tasks.
+
+
+
+\begin{figure}
+\begin{center}
+   \includegraphics[width=1.0\linewidth]{img/Fig6sz-longtermjpg.jpg}
+   \end{center}
+   \caption{ SZ-taxi: Long-term prediction capability.}
+\label{fig:6}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+   \includegraphics[width=1.0\linewidth]{img/Fig7los-longtermjpg.jpg}
+   \end{center}
+   \caption{Los-loop: Long-term prediction capability.}
+\label{fig:7}
+\end{figure}
+
+
+\begin{table}
+\footnotesize
+	\caption{Comparison of forecasting results between A3T-GCN and T-GCN under different lengths of time series based on SZ-taxi and Los-loop.}
+	\centering
+	%\resizebox{130mm}{40mm}{
+	\renewcommand{\arraystretch}{1}
+	
+	\begin{tabular}{c|c|cc|cc}
+		\hline
+		\multirow{2}{*}{T}&
+		\multirow{2}{*}{Metric}&
+		\multicolumn{2}{c|}{SZ-taxi}&
+		\multicolumn{2}{c}{Los-loop} \\
+		\cline{3-6}
+		&&T-GCN&AT-GCN&T-GCN&AT-GCN\\
+
+		\hline\hline
+		\multirow{5}*{15min}
+		&$RMSE$&3.9325&\textbf{3.8989}&5.1264&\textbf{5.0904}\\
+		&$MAE$&2.7145&\textbf{2.6840}&3.1802&\textbf{3.1365}\\
+		&$Accuracy$&0.7295&\textbf{0.7318}&0.9127&\textbf{0.9133}\\
+		&$R^{2}$&0.8539&\textbf{0.8512}&0.8634&\textbf{0.8653}\\
+		&$var$&0.8539&\textbf{0.8512}&0.8634&\textbf{0.8653}\\
+		\hline
+		\multirow{5}*{30min}
+		&$RMS$E&3.9740&\textbf{3.9228}&6.0598&\textbf{5.9974}\\
+		&$MAE$&2.7522&\textbf{2.7038}&3.7466&\textbf{3.6610}\\
+		&$Accuracy$&0.7267&\textbf{0.7302}&0.8968&\textbf{0.8979}\\
+		&$R^{2}$&0.8451&\textbf{0.8493}&0.8098&\textbf{0.8137}\\
+		&$var$&0.8451&\textbf{0.8493}&0.8100&\textbf{0.8137}\\
+		\hline
+		\multirow{5}*{45min}
+		&$RMSE$&3.9910&\textbf{3.9461}&6.7065&\textbf{6.684}\\
+		&$MAE$&2.7645&\textbf{2.7261}&4.1158&\textbf{4.1712}\\
+		&$Accuracy$&0.7255&\textbf{0.7286}&0.8857&\textbf{0.8861}\\
+		&$R^{2}$&0.8436&\textbf{0.8474}&0.7679&\textbf{0.7694}\\
+		&$var$&0.8436&\textbf{0.8474}&0.7684&\textbf{0.7705}\\	
+		\hline
+		\multirow{5}*{60min}
+		&$RMSE$&4.0099&\textbf{3.9707}&7.2677&\textbf{7.099}\\
+		&$MAE$&2.7860&\textbf{2.7391}&4.6021&\textbf{4.2343}\\
+		&$Accuracy$&0.7242&\textbf{0.7269}&0.8762&\textbf{0.8790}\\
+		&$R^{2}$&0.8421&\textbf{0.8454}&0.7283&\textbf{0.7407}\\
+		&$var$&0.8421&\textbf{0.8454}&0.7290&\textbf{0.7415}\\
+		\hline
+	\end{tabular}
+	\label{table2}
+\end{table}
+\par (4) Effectiveness of introducing attention to capture global variation. A3T-GCN and T-GCN were compared to test the superiority of capturing global variation. Results are shown in Table \ref{table2}. A3T-GCN model shows approximately 0.86\% lower RMSE and approximately 0.32\% higher accuracy than T-GCN model under 15 minutes time series, approximately 1.31\% lower RMSE and approximately 0.48\% higher accuracy under 30 minutes time series, approximately 1.14\% lower RMSE and approximately 0.43\% higher accuracy under 45 minutes traffic forecasting, and approximately 0.99\% lower RMSE and approximately 0.37\% higher accuracy under 60 minutes time series.
+\par Hence, the prediction error of A3T-GCN is lower than that of T-GCN, but the accuracy of the former is higher under different horizons of traffic forecasting, thereby proving the global feature capturing capability of the A3T-GCN model.
+
+
+\subsection{ Perturbation analysis}
+\par Noise is inevitable in real-world datasets. Therefore, perturbation analysis is conducted to test the robustness of A3T-GCN. In this experiment, two types of random noises are added to the traffic data. Random noise obeys Gaussian distribution $N\in (0,\sigma^2)$, where $\sigma\in(0.2,0.4,0.8,1,2)$, and Poisson distribution $P(\lambda)$ where $\lambda\in(1,2,4,8,16)$. The noise matrix values are normalized to [0,1].
+
+\begin{figure}[ht]
+\begin{center}
+   \includegraphics[width=1.0\linewidth]{img/Fig8sz-perturbation.jpg}
+   \end{center}
+   \caption{ SZ-taxi: perturbation analysis.}
+\label{fig:8}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+   \includegraphics[width=1.0\linewidth]{img/Fig9los-perturbation.jpg}
+   \end{center}
+   \caption{Los-loop: perturbation analysis.}
+\label{fig:9}
+\end{figure}
+
+\par The experimental results based on SZ\_taxi are shown in Fig. \ref{fig:8}. The results of adding Gaussian noise are shown in Fig. \ref{fig:8}(a), where the x- and y-axes show the changes in $\sigma$ and in different evaluation metrics, respectively. Different colors represent various metrics. Similarly, the results of adding Poisson noise are shown in Fig. \ref{fig:8}(b). The values of different evaluation metrics remain basically the same regardless of the changes in $\sigma/\lambda$. Hence, the proposed model can remarkably resist noise and process strong noise problems. 
+
+\par The experimental results based on Los\_loop  are consistent with experimental results based on SZ\_taxi (Fig. \ref{fig:9}). Therefore, the A3T-GCN model can remarkably resist noise and still obtain stable forecasting results under Gaussian and Poisson perturbations.
+
+
+
+
+\begin{figure}
+\centering
+\subfigure[15 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig10.jpg} \\
+\end{minipage}
+}
+\subfigure[30 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig11.jpg} \\
+\end{minipage}
+}
+\subfigure[45 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig12.jpg} \\
+\end{minipage}
+}
+\subfigure[60 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig13.jpg} \\
+\end{minipage}
+}
+
+\caption{The visualization results for prediction horizon of 15, 30, 45, 60 minutes (SZ-taxi).}
+\label{fig:10}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfigure[15 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig14.jpg} \\
+\end{minipage}
+}
+\subfigure[30 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig15.jpg} \\
+\end{minipage}
+}
+\subfigure[45 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig16.jpg} \\
+\end{minipage}
+}
+\subfigure[60 minutes]{
+\begin{minipage}[b]{1.0\linewidth}
+\includegraphics[width=1.0\linewidth]{img/Fig17.jpg} \\
+\end{minipage}
+}
+
+\caption{The visualization results for prediction horizon of 15, 30, 45, 60 minutes (Los-loop).}
+\label{fig:11}
+\end{figure}
+
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig10.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 15 minutes.}
+% \label{fig:10}
+% \end{figure}
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig11.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 30 minutes.}
+% \label{fig:11}
+% \end{figure}
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig12.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 45 minutes.}
+% \label{fig:12}
+% \end{figure}
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig13.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 60 minutes.}
+% \label{fig:13}
+% \end{figure}
+
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig14.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 15 minutes.}
+% \label{fig:14}
+% \end{figure}
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig15.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 30 minutes.}
+% \label{fig:15}
+% \end{figure}
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig16.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 45 minutes.}
+% \label{fig:16}
+% \end{figure}
+% \begin{figure}
+% \begin{center}
+%   \includegraphics[width=1.0\linewidth]{img/Fig17.jpg}
+%   \end{center}
+%   \caption{The visualization results for prediction horizon of 60 minutes.}
+% \label{fig:17}
+% \end{figure}
+
+
+\subsection{Visualized analysis}
+\par The forecasting results of A3T-GCN model based on two real datasets are visualized for a good explanation of the model.
+\par (1) SZ-taxi: We visualize the result of one road on January 27, 2015. Visualization results in 15, 30, 45, and 60 minutes of time series are shown in Fig. \ref{fig:10}.
+\par (2) Los-loop: Similarly, we visualize one loop detector data in Los-loop dataset. Visualization results in 15, 30, 45, and 60 minutes are shown in Fig. \ref{fig:11}.
+\par In sum, the predicted traffic speed shows similar variation trend with actual traffic speed under different time series lengths, which suggest that the A3T-GCN model is competent in the traffic forecasting task. This model can also capture the variation trends of traffic speed and recognize the start and end points of rush hours. The A3T-GCN model forecasts traffic jam accurately, thereby proving its validity in real-time traffic forecasting.
+
+\section{Conclusions}
+\par A traffic forecasting method called A3T-GCN is proposed to capture global temporal dynamics and spatial correlations simultaneously and facilitates traffic forecasting. The urban road network is constructed into a graph, and the traffic speed on roads is described as attributes of nodes on the graph. In the proposed method, the spatial dependencies are captured by GCN based on the topological characteristics of the road network. Meanwhile, the dynamic variation of the sequential historical traffic speeds is captured by GRU. Moreover, the global temporal variation trend is captured and assembled by the attention mechanism. Finally, the proposed A3T-GCN model is tested in the urban road network-based traffic forecasting task using two real datasets, namely, SZ-taxi and Los-loop. The results show that the A3T-GCN model is superior to HA, ARIMA, SVR, GCN, GRU, and T-GCN in terms of prediction precision under different lengths of prediction horizon, thereby proving its validity in real-time traffic forecasting. 
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+
+
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+
+% you can choose not to have a title for an appendix
+% if you want by leaving the argument blank
+%\section{}
+%Appendix two text goes here.
+
+
+% use section* for acknowledgment
+\ifCLASSOPTIONcompsoc
+  % The Computer Society usually uses the plural form
+  \section*{Acknowledgments}
+\else
+  % regular IEEE prefers the singular form
+  \section*{Acknowledgment}
+\fi
+
+This work was supported by the National Science Foundation of China [grant numbers 41571397, 41501442, 41871364, 51678077 and 41771492].
+
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+
+
+% argument is your BibTeX string definitions and bibliography database(s)
+%bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+{\small
+\bibliographystyle{plain}
+\bibliography{A3T-GCN}
+}
+
+\end{document}
+
+

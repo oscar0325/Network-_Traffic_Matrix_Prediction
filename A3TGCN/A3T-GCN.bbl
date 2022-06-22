@@ -1,0 +1,222 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ahmed1979ANALYSIS}
+Mohamed~S. Ahmed and Allen~R. Cook.
+\newblock {\em ANALYSIS OF FREEWAY TRAFFIC TIME-SERIES DATA BY USING
+  BOX-JENKINS TECHNIQUES}.
+\newblock 1979.
+
+\bibitem{Altman1992An}
+N.~S. Altman.
+\newblock An introduction to kernel and nearest-neighbor nonparametric
+  regression.
+\newblock {\em American Statistician}, 46(3):175--185, 1992.
+
+\bibitem{bahdanau2014neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
+\newblock Neural machine translation by jointly learning to align and
+  translate, 2014.
+
+\bibitem{Bengio2002Learning}
+.~Bengio, Y., .~Simard, P., and .~Frasconi, P.
+\newblock Learning long-term dependencies with gradient descent is difficult.
+\newblock {\em IEEE Trans Neural Netw}, 5(2):157--166, 2002.
+
+\bibitem{Bruna2013Spectral}
+Joan Bruna, Wojciech Zaremba, Arthur Szlam, and Yann Lecun.
+\newblock Spectral networks and locally connected networks on graphs.
+\newblock 2013.
+
+\bibitem{Cao2017Interactive}
+Xiaofeng Cao, Yuhua Zhong, Zhou Yun, Wang Jiang, and Weiming Zhang.
+\newblock Interactive temporal recurrent convolution network for traffic
+  prediction in data centers.
+\newblock {\em IEEE Access}, PP(99):1--1, 2017.
+
+\bibitem{Cho2014On}
+Kyunghyun Cho, Bart~Van Merrienboer, Dzmitry Bahdanau, and Yoshua Bengio.
+\newblock On the properties of neural machine translation: Encoder-decoder
+  approaches.
+\newblock {\em Computer Science}, 2014.
+
+\bibitem{chung2014empirical}
+Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio.
+\newblock Empirical evaluation of gated recurrent neural networks on sequence
+  modeling, 2014.
+
+\bibitem{defferrard2016convolutional}
+Michal Defferrard, Xavier Bresson, and Pierre Vandergheynst.
+\newblock Convolutional neural networks on graphs with fast localized spectral
+  filtering, 2016.
+
+\bibitem{Dong2012Spatial}
+Chun~Jiao Dong, Chun~Fu Shao, Zhuge Cheng-Xiang, and Meng Meng.
+\newblock Spatial and temporal characteristics for congested traffic on urban
+  expressway.
+\newblock {\em Journal of Beijing University of Technology},
+  38(8):1242--1246+1268, 2012.
+
+\bibitem{Fu2013Short}
+Gui Fu, GuoQiang Han, Feng Lu, and ZiXin Xu.
+\newblock Short-term traffic flow forecasting model based on support vector
+  machine regression.
+\newblock {\em Journal of South China University of Technology}, 41(9):71--76,
+  2013.
+
+\bibitem{Gaoa2018Measuring}
+Lei Gao, Xingquan Liu, Yu~Liu, Pu~Wang, Min Deng, Qing Zhu, and Haifeng Li.
+\newblock Measuring road network topology vulnerability by ricci curvature.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  527:121071, 2019.
+
+\bibitem{Graves1997Long}
+Alex Graves.
+\newblock Long short-term memory.
+\newblock {\em Neural Computation}, 9(8):1735--1780, 1997.
+
+\bibitem{Hodge2014Short}
+Victoria~J. Hodge, Rajesh Krishnan, Jim Austin, John Polak, and Tom Jackson.
+\newblock Short-term prediction of traffic flow using a binary neural network.
+\newblock {\em Neural Computing and Applications}, 25(7-8):1639--1655, 2014.
+
+\bibitem{Huang2005Dynamic}
+Hai~Jun Huang.
+\newblock Dynamic modeling of urban transportation networks and analysis of its
+  travel behaviors.
+\newblock {\em Chinese Journal of Management}, 2005.
+
+\bibitem{Jian2012Synthesis}
+Yuan Jian and Bingquan Fan.
+\newblock Synthesis of short-term traffic flow forecasting research progress.
+\newblock {\em Urban Transport of China}, 2012.
+
+\bibitem{Jing2004A}
+Liu Jing and Guan Wei.
+\newblock A summary of traffic flow forecasting methods.
+\newblock {\em Journal of Highway and Transportation Research \& Development},
+  2004.
+
+\bibitem{kipf2016semisupervised}
+Thomas~N. Kipf and Max Welling.
+\newblock Semi-supervised classification with graph convolutional networks,
+  2016.
+
+\bibitem{DBLP:journals/corr/LiYSL17}
+Yaguang Li, Rose Yu, Cyrus Shahabi, and Yan Liu.
+\newblock Graph convolutional recurrent neural network: Data-driven traffic
+  forecasting.
+\newblock {\em CoRR}, abs/1707.01926, 2017.
+
+\bibitem{Lint2002Freeway}
+J.~W. C.~Van Lint, S.~P. Hooqendoorn, and H.~J.~Van Zuvlen.
+\newblock Freeway travel time prediction with state-space neural networks:
+  Modeling state-space dynamics with recurrent neural networks.
+\newblock {\em Transportation Research Record Journal of the Transportation
+  Research Board}, 1811(1):347–369, 2002.
+
+\bibitem{Luong2015Effective}
+Minh~Thang Luong, Hieu Pham, and Christopher~D. Manning.
+\newblock Effective approaches to attention-based neural machine translation.
+\newblock {\em Computer Science}, 2015.
+
+\bibitem{Morav2017DeepStack}
+M~Morav?ík, M~Schmid, N~Burch, V~Lisy, D~Morrill, N~Bard, T~Davis, K~Waugh,
+  M~Johanson, and M~Bowling.
+\newblock Deepstack: Expert-level artificial intelligence in heads-up no-limit
+  poker.
+\newblock {\em Science}, 356(6337):eaam6960, 2017.
+
+\bibitem{Okutani1984Dynamic}
+Iwao Okutani and Yorgos~J. Stephanedes.
+\newblock Dynamic prediction of traffic volume through kalman filtering theory.
+\newblock {\em Transportation Research Part B Methodological}, 18(1):1--11,
+  1984.
+
+\bibitem{Pappas2017Multilingual}
+Nikolaos Pappas and Andrei Popescu-Belis.
+\newblock Multilingual hierarchical attention networks for document
+  classification.
+\newblock 2017.
+
+\bibitem{Rui2016Using}
+Fu~Rui, Zhang Zuo, and Li~Li.
+\newblock Using lstm and gru neural network methods for traffic flow
+  prediction.
+\newblock In {\em Youth Academic Conference of Chinese Association of
+  Automation}, 2016.
+
+\bibitem{Silver2017Mastering}
+D~Silver, J~Schrittwieser, K~Simonyan, I~Antonoglou, A.~Huang, A~Guez,
+  T~Hubert, L~Baker, M.~Lai, and A~Bolton.
+\newblock Mastering the game of go without human knowledge.
+\newblock {\em Nature}, 550(7676):354--359, 2017.
+
+\bibitem{Sun2004Interval}
+Hongyu Sun, Chunming Zhang, and Bin Ran.
+\newblock Interval prediction for traffic time series using local linear
+  predictor.
+\newblock In {\em International IEEE Conference on Intelligent Transportation
+  Systems}, 2004.
+
+\bibitem{Sun2006A}
+Shiliang Sun, Changshui Zhang, and Guoqiang Yu.
+\newblock A bayesian network approach to traffic flow forecasting.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  7(1):124--132, 2006.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In {\em Advances in neural information processing systems}, pages
+  5998--6008, 2017.
+
+\bibitem{article}
+Chun-Hsin Wu, Jan-Ming Ho, and D.~Lee.
+\newblock Travel-time prediction with support vector regression.
+\newblock {\em Intelligent Transportation Systems, IEEE Transactions on}, 5:276
+  -- 281, 01 2005.
+
+\bibitem{Wu2016Short}
+Yuankai Wu and Huachun Tan.
+\newblock Short-term traffic flow forecasting with spatial-temporal correlation
+  in a hybrid deep learning framework.
+\newblock 2016.
+
+\bibitem{xiao2017attentional}
+Jun Xiao, Hao Ye, Xiangnan He, Hanwang Zhang, Fei Wu, and Tat-Seng Chua.
+\newblock Attentional factorization machines: Learning the weight of feature
+  interactions via attention networks, 2017.
+
+\bibitem{xu2015attend}
+Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan
+  Salakhutdinov, Richard Zemel, and Yoshua Bengio.
+\newblock Show, attend and tell: Neural image caption generation with visual
+  attention, 2015.
+
+\bibitem{Yin2002Urban}
+Hongbin Yin, S.~C. Wong, Jianmin Xu, and C.~K. Wong.
+\newblock Urban traffic flow prediction using a fuzzy-neural approach.
+\newblock {\em Transportation Research Part C}, 10(2):85--98, 2002.
+
+\bibitem{yu2020forecasting}
+Byeonghyeop Yu, Yongjin Lee, and Keemin Sohn.
+\newblock Forecasting road traffic speeds by considering area-wide
+  spatio-temporal dependencies based on a graph convolutional neural network
+  (gcn).
+\newblock {\em Transportation Research Part C: Emerging Technologies},
+  114:189--204, 2020.
+
+\bibitem{Yu2017Spatiotemporal}
+H.~Yu, Z.~Wu, S.~Wang, Y.~Wang, and X.~Ma.
+\newblock Spatiotemporal recurrent convolutional networks for traffic
+  prediction in transportation networks.
+\newblock {\em Sensors}, 17(7):1501--, 2017.
+
+\bibitem{zhao2019t}
+Ling Zhao, Yujiao Song, Chao Zhang, Yu~Liu, Pu~Wang, Tao Lin, Min Deng, and
+  Haifeng Li.
+\newblock T-gcn: A temporal graph convolutional network for traffic prediction.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems}, 2019.
+
+\end{thebibliography}

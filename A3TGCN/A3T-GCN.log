@@ -1,0 +1,781 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.13)  15 JUN 2022 20:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**A3T-GCN.tex
+(./A3T-GCN.tex
+LaTeX2e <2022-06-01> pre-release-0 (develop 2022-6-13 branch)
+L3 programming layer <2022-06-02>
+(c:/texlive/2022/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count185
+\@IEEEtrantmpcountB=\count186
+\@IEEEtrantmpcountC=\count187
+\@IEEEtrantmptoksA=\toks16
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 5
+03.
+(c:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+-- Using IEEE Computer Society mode.
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@IEEEsubequation=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count193
+\c@table=\count194
+\@IEEEeqnnumcols=\count195
+\@IEEEeqncolcnt=\count196
+\@IEEEsubeqnnumrollback=\count197
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count198
+\@IEEEquantizeboxA=\box51
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count199
+\@IEEEtranrubishbin=\box52
+) (c:/texlive/2022/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+)
+(c:/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip50
+\subfigcapskip=\skip51
+\subfigcaptopadj=\dimen164
+\subfigbottomskip=\skip52
+\subfigcapmargin=\dimen165
+\subfiglabelskip=\skip53
+\c@subfigure=\count266
+\c@lofdepth=\count267
+\c@subtable=\count268
+\c@lotdepth=\count269
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(c:/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip54
+\subfig@bottom=\skip55
+)
+(c:/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip56
+\multirow@cntb=\count270
+\multirow@dima=\skip57
+\bigstrutjot=\dimen166
+)
+(c:/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+
+
+Package natbib Warning: The `cite' package should not be used
+(natbib)                with natbib. Use option `sort' instead.
+
+\bibhang=\skip58
+\bibsep=\skip59
+LaTeX Info: Redefining \cite on input line 694.
+LaTeX Info: Redefining \citenum on input line 708.
+\c@NAT@ctr=\count271
+) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count272
+\l__pdf_internal_box=\box53
+)
+No file A3T-GCN.aux.
+\openout1 = `A3T-GCN.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 511.
+LaTeX Font Info:    ... okay on input line 511.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 511.
+LaTeX Font Info:    ... okay on input line 511.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 511.
+LaTeX Font Info:    ... okay on input line 511.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 511.
+LaTeX Font Info:    ... okay on input line 511.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 511.
+LaTeX Font Info:    ... okay on input line 511.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 511.
+LaTeX Font Info:    ... okay on input line 511.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 511.
+LaTeX Font Info:    ... okay on input line 511.
+-- Lines per column: 61 (exact).
+(c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count273
+\scratchdimen=\dimen167
+\scratchbox=\box54
+\nofMPsegments=\count274
+\nofMParguments=\count275
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count276
+\MPscratchDim=\dimen168
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
+\everyMPtoPDFconversion=\toks19
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(c:/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+(c:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(c:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(c:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 6
+28.
+
+(c:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 62
+8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11.04124> on input line 628.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.72884> on input line 628.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.52061> on input line 628.
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 628
+.
+
+(c:/texlive/2022/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 628.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8.03> on input line 628.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.62097> on input line 628.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.015> on input line 628.
+
+
+Package natbib Warning: Citation `Huang2005Dynamic' on page 1 undefined on inpu
+t line 686.
+
+
+Package natbib Warning: Citation `Jian2012Synthesis' on page 1 undefined on inp
+ut line 686.
+
+
+Package natbib Warning: Citation `Jing2004A' on page 1 undefined on input line 
+686.
+
+
+Package natbib Warning: Citation `Gaoa2018Measuring' on page 1 undefined on inp
+ut line 686.
+
+
+Package natbib Warning: Citation `Dong2012Spatial' on page 1 undefined on input
+ line 686.
+
+
+Package natbib Warning: Citation `Ahmed1979ANALYSIS' on page 1 undefined on inp
+ut line 688.
+
+
+Package natbib Warning: Citation `Hodge2014Short' on page 1 undefined on input 
+line 688.
+
+
+Package natbib Warning: Citation `Sun2004Interval' on page 1 undefined on input
+ line 688.
+
+
+Package natbib Warning: Citation `Okutani1984Dynamic' on page 1 undefined on in
+put line 688.
+
+
+Package natbib Warning: Citation `Altman1992An' on page 1 undefined on input li
+ne 688.
+
+
+Package natbib Warning: Citation `article' on page 1 undefined on input line 68
+8.
+
+
+Package natbib Warning: Citation `Fu2013Short' on page 1 undefined on input lin
+e 688.
+
+
+Package natbib Warning: Citation `Yin2002Urban' on page 1 undefined on input li
+ne 688.
+
+
+Package natbib Warning: Citation `Sun2006A' on page 1 undefined on input line 6
+88.
+
+
+Package natbib Warning: Citation `Silver2017Mastering' on page 1 undefined on i
+nput line 689.
+
+
+Package natbib Warning: Citation `Morav2017DeepStack' on page 1 undefined on in
+put line 689.
+
+
+Package natbib Warning: Citation `Graves1997Long' on page 1 undefined on input 
+line 689.
+
+
+Package natbib Warning: Citation `Cho2014On' on page 1 undefined on input line 
+689.
+
+
+Package natbib Warning: Citation `Rui2016Using' on page 1 undefined on input li
+ne 689.
+
+
+Package natbib Warning: Citation `Lint2002Freeway' on page 1 undefined on input
+ line 689.
+
+
+Package natbib Warning: Citation `Wu2016Short' on page 1 undefined on input lin
+e 689.
+
+
+Package natbib Warning: Citation `Cao2017Interactive' on page 1 undefined on in
+put line 689.
+
+
+Package natbib Warning: Citation `Yu2017Spatiotemporal' on page 1 undefined on 
+input line 689.
+
+
+Package natbib Warning: Citation `defferrard2016convolutional' on page 1 undefi
+ned on input line 690.
+
+
+Package natbib Warning: Citation `kipf2016semisupervised' on page 1 undefined o
+n input line 690.
+
+
+Package natbib Warning: Citation `DBLP:journals/corr/LiYSL17' on page 1 undefin
+ed on input line 690.
+
+
+Package natbib Warning: Citation `zhao2019t' on page 1 undefined on input line 
+690.
+
+
+Package natbib Warning: Citation `yu2020forecasting' on page 1 undefined on inp
+ut line 690.
+
+[1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+Package natbib Warning: Citation `xu2015attend' on page 2 undefined on input li
+ne 691.
+
+
+Package natbib Warning: Citation `vaswani2017attention' on page 2 undefined on 
+input line 691.
+
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 796
+.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.53561> on input line 796.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6.6749> on input line 796.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.7678> on input line 796.
+
+Package natbib Warning: Citation `Bruna2013Spectral' on page 2 undefined on inp
+ut line 809.
+
+
+Package natbib Warning: Citation `defferrard2016convolutional' on page 2 undefi
+ned on input line 809.
+
+
+Package natbib Warning: Citation `kipf2016semisupervised' on page 2 undefined o
+n input line 809.
+
+
+Package natbib Warning: Citation `Bruna2013Spectral' on page 2 undefined on inp
+ut line 809.
+
+
+Package natbib Warning: Citation `kipf2016semisupervised' on page 2 undefined o
+n input line 816.
+
+
+Package natbib Warning: Citation `kipf2016semisupervised' on page 2 undefined o
+n input line 822.
+
+
+Package natbib Warning: Citation `Bengio2002Learning' on page 2 undefined on in
+put line 825.
+
+
+Package natbib Warning: Citation `Graves1997Long' on page 2 undefined on input 
+line 825.
+
+
+Package natbib Warning: Citation `Cho2014On' on page 2 undefined on input line 
+825.
+
+
+Package natbib Warning: Citation `chung2014empirical' on page 2 undefined on in
+put line 825.
+
+[2]
+
+Package natbib Warning: Citation `bahdanau2014neural' on page 3 undefined on in
+put line 844.
+
+
+Package natbib Warning: Citation `xu2015attend' on page 3 undefined on input li
+ne 844.
+
+
+Package natbib Warning: Citation `xiao2017attentional' on page 3 undefined on i
+nput line 844.
+
+
+Package natbib Warning: Citation `Pappas2017Multilingual' on page 3 undefined o
+n input line 844.
+
+
+Package natbib Warning: Citation `bahdanau2014neural' on page 3 undefined on in
+put line 844.
+
+
+Package natbib Warning: Citation `Luong2015Effective' on page 3 undefined on in
+put line 844.
+
+
+Package natbib Warning: Citation `vaswani2017attention' on page 3 undefined on 
+input line 844.
+
+
+Package natbib Warning: Citation `zhao2019t' on page 3 undefined on input line 
+860.
+
+
+LaTeX Warning: Reference `fig:1' on page 3 undefined on input line 860.
+
+<img/Fig1ATGCN.jpg, id=24, 314.73586pt x 84.315pt>
+File: img/Fig1ATGCN.jpg Graphic file (type jpg)
+<use img/Fig1ATGCN.jpg>
+Package pdftex.def Info: img/Fig1ATGCN.jpg  used on input line 865.
+(pdftex.def)             Requested size: 517.935pt x 138.7702pt.
+
+Underfull \hbox (badness 1755) in paragraph at lines 871--872
+\OT1/ppl/m/n/9.53561 tain n hid-den states (h) that cov-ered spa-tiotem-po-ral
+ []
+
+[3]
+
+LaTeX Warning: Reference `table' on page 4 undefined on input line 1007.
+
+[4 <./img/Fig1ATGCN.jpg>]
+<img/Fig4sz-GCNGRU.jpg, id=31, 1422.7554pt x 498.1812pt>
+File: img/Fig4sz-GCNGRU.jpg Graphic file (type jpg)
+<use img/Fig4sz-GCNGRU.jpg>
+Package pdftex.def Info: img/Fig4sz-GCNGRU.jpg  used on input line 1017.
+(pdftex.def)             Requested size: 252.94499pt x 88.5665pt.
+<img/Fig5los-GCNGRU.jpg, id=32, 1422.7554pt x 501.072pt>
+File: img/Fig5los-GCNGRU.jpg Graphic file (type jpg)
+<use img/Fig5los-GCNGRU.jpg>
+Package pdftex.def Info: img/Fig5los-GCNGRU.jpg  used on input line 1025.
+(pdftex.def)             Requested size: 252.94499pt x 89.08043pt.
+
+
+LaTeX Warning: Reference `fig:4' on page 5 undefined on input line 1031.
+
+
+LaTeX Warning: Reference `fig:5' on page 5 undefined on input line 1033.
+
+[5 <./img/Fig4sz-GCNGRU.jpg> <./img/Fig5los-GCNGRU.jpg>]
+
+LaTeX Warning: Reference `fig:6' on page 6 undefined on input line 1038.
+
+
+LaTeX Warning: Reference `fig:6' on page 6 undefined on input line 1038.
+
+
+LaTeX Warning: Reference `fig:6' on page 6 undefined on input line 1038.
+
+
+LaTeX Warning: Reference `fig:7' on page 6 undefined on input line 1039.
+
+<img/Fig6sz-longtermjpg.jpg, id=38, 1422.7554pt x 483.4863pt>
+File: img/Fig6sz-longtermjpg.jpg Graphic file (type jpg)
+<use img/Fig6sz-longtermjpg.jpg>
+Package pdftex.def Info: img/Fig6sz-longtermjpg.jpg  used on input line 1045.
+(pdftex.def)             Requested size: 252.94499pt x 85.95404pt.
+<img/Fig7los-longtermjpg.jpg, id=39, 1422.7554pt x 477.9456pt>
+File: img/Fig7los-longtermjpg.jpg Graphic file (type jpg)
+<use img/Fig7los-longtermjpg.jpg>
+Package pdftex.def Info: img/Fig7los-longtermjpg.jpg  used on input line 1053.
+(pdftex.def)             Requested size: 252.94499pt x 84.96902pt.
+
+LaTeX Warning: Reference `table2' on page 6 undefined on input line 1108.
+
+<img/Fig8sz-perturbation.jpg, id=40, 1418.1783pt x 463.7325pt>
+File: img/Fig8sz-perturbation.jpg Graphic file (type jpg)
+<use img/Fig8sz-perturbation.jpg>
+Package pdftex.def Info: img/Fig8sz-perturbation.jpg  used on input line 1117.
+(pdftex.def)             Requested size: 252.94499pt x 82.70404pt.
+<img/Fig9los-perturbation.jpg, id=41, 1418.1783pt x 462.528pt>
+File: img/Fig9los-perturbation.jpg Graphic file (type jpg)
+<use img/Fig9los-perturbation.jpg>
+Package pdftex.def Info: img/Fig9los-perturbation.jpg  used on input line 1125.
+
+(pdftex.def)             Requested size: 252.94499pt x 82.48921pt.
+
+LaTeX Warning: Reference `fig:8' on page 6 undefined on input line 1131.
+
+
+LaTeX Warning: Reference `fig:8' on page 6 undefined on input line 1131.
+
+
+LaTeX Warning: Reference `fig:8' on page 6 undefined on input line 1131.
+
+[6 <./img/Fig6sz-longtermjpg.jpg> <./img/Fig7los-longtermjpg.jpg> <./img/Fig8sz
+-perturbation.jpg> <./img/Fig9los-perturbation.jpg>]
+
+LaTeX Warning: Reference `fig:9' on page 7 undefined on input line 1133.
+
+<img/Fig10.jpg, id=45, 432.1746pt x 121.1727pt>
+File: img/Fig10.jpg Graphic file (type jpg)
+<use img/Fig10.jpg>
+Package pdftex.def Info: img/Fig10.jpg  used on input line 1144.
+(pdftex.def)             Requested size: 252.94499pt x 70.91994pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1144
+
+ []
+
+<img/Fig11.jpg, id=46, 432.1746pt x 119.7273pt>
+File: img/Fig11.jpg Graphic file (type jpg)
+<use img/Fig11.jpg>
+Package pdftex.def Info: img/Fig11.jpg  used on input line 1149.
+(pdftex.def)             Requested size: 252.94499pt x 70.07397pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1149
+
+ []
+
+<img/Fig12.jpg, id=47, 432.8973pt x 120.45pt>
+File: img/Fig12.jpg Graphic file (type jpg)
+<use img/Fig12.jpg>
+Package pdftex.def Info: img/Fig12.jpg  used on input line 1154.
+(pdftex.def)             Requested size: 252.94499pt x 70.37933pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1154
+
+ []
+
+<img/Fig13.jpg, id=48, 434.3427pt x 119.7273pt>
+File: img/Fig13.jpg Graphic file (type jpg)
+<use img/Fig13.jpg>
+Package pdftex.def Info: img/Fig13.jpg  used on input line 1159.
+(pdftex.def)             Requested size: 252.94499pt x 69.72687pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1159--1159
+
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1144--1160
+ [][] 
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1144--1160
+ [] 
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1144--1160
+ [] 
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1144--1160
+ [] 
+ []
+
+<img/Fig14.jpg, id=49, 441.20834pt x 128.03835pt>
+File: img/Fig14.jpg Graphic file (type jpg)
+<use img/Fig14.jpg>
+Package pdftex.def Info: img/Fig14.jpg  used on input line 1171.
+(pdftex.def)             Requested size: 252.94499pt x 73.4046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1171
+
+ []
+
+<img/Fig15.jpg, id=50, 441.20834pt x 128.03835pt>
+File: img/Fig15.jpg Graphic file (type jpg)
+<use img/Fig15.jpg>
+Package pdftex.def Info: img/Fig15.jpg  used on input line 1176.
+(pdftex.def)             Requested size: 252.94499pt x 73.4046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1176
+
+ []
+
+<img/Fig16.jpg, id=51, 441.20834pt x 128.03835pt>
+File: img/Fig16.jpg Graphic file (type jpg)
+<use img/Fig16.jpg>
+Package pdftex.def Info: img/Fig16.jpg  used on input line 1181.
+(pdftex.def)             Requested size: 252.94499pt x 73.4046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1181
+
+ []
+
+<img/Fig17.jpg, id=52, 455.42145pt x 128.03835pt>
+File: img/Fig17.jpg Graphic file (type jpg)
+<use img/Fig17.jpg>
+Package pdftex.def Info: img/Fig17.jpg  used on input line 1186.
+(pdftex.def)             Requested size: 252.94499pt x 71.11487pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1186
+
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1171--1187
+ [][] 
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1171--1187
+ [] 
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1171--1187
+ [] 
+ []
+
+
+Overfull \hbox (5.3399pt too wide) in paragraph at lines 1171--1187
+ [] 
+ []
+
+
+LaTeX Warning: Reference `fig:10' on page 7 undefined on input line 1253.
+
+
+LaTeX Warning: Reference `fig:11' on page 7 undefined on input line 1254.
+
+[7 <./img/Fig10.jpg> <./img/Fig11.jpg> <./img/Fig12.jpg> <./img/Fig13.jpg> <./i
+mg/Fig14.jpg> <./img/Fig15.jpg> <./img/Fig16.jpg> <./img/Fig17.jpg>]
+(./A3T-GCN.bbl
+Underfull \hbox (badness 2229) in paragraph at lines 48--51
+[]\OT1/ppl/m/n/9.03374 Michal Def-fer-rard, Xavier Bres-son, and Pierre Van-
+ []
+
+
+Underfull \hbox (badness 1424) in paragraph at lines 162--166
+\OT1/ppl/m/it/9.03374 IEEE Trans-ac-tions on In-tel-li-gent Trans-porta-tion Sy
+s-tems\OT1/ppl/m/n/9.03374 ,
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 168--173
+[]\OT1/ppl/m/n/9.03374 Ashish Vaswani, Noam Shazeer, Niki Par-mar, Jakob
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8])
+
+Package natbib Warning: There were undefined citations.
+
+[9
+
+] (./A3T-GCN.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3772 strings out of 478040
+ 67245 string characters out of 5843119
+ 401489 words of memory out of 5000000
+ 22148 multiletter control sequences out of 15000+600000
+ 511174 words of font info for 109 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 60i,12n,67p,1681b,369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><
+c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:
+/texlive/2022/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2022/t
+exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2022/texmf-dist/fonts
+/type1/urw/palatino/uplri8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/zap
+fding/uzdr.pfb>
+Output written on A3T-GCN.pdf (9 pages, 9801474 bytes).
+PDF statistics:
+ 135 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+
